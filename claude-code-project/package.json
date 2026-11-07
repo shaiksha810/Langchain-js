@@ -1,0 +1,24 @@
+{
+  "name": "claude-code-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "beta": "./cli.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@langchain/groq": "^1.3.1",
+    "@langchain/langgraph": "^1.7.1",
+    "axios": "^1.21.0",
+    "dotenv": "^18.0.9",
+    "langchain": "^1.6.2",
+    "zod": "^4.6.7"
+  }
+}
