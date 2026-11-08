@@ -1,5 +1,5 @@
 import {ChatGroq} from "@langchain/groq"
-import {getApiKey} from "../utils/file.utils.js"
+import {getApiKey} from "../../utils/file.utils.js"
 import { AIMessage } from "langchain"
 
 

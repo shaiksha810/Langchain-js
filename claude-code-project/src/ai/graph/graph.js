@@ -1,7 +1,7 @@
 import { StateGraph, START, END} from "@langchain/langgraph"
 import {z} from "zod"
 import { LLMnode } from "./node.js"
-import {rl} from "../utils/readline.js"
+import {rl} from "../../utils/readline.js"
 import { HumanMessage, SystemMessage } from "langchain"
 
 
@@ -25,11 +25,13 @@ export async function initGraph() {
     while(true) {
         const userInput = await rl.question("[User]:")
 
+        if(userInput === "/bye") {
+            break
+        }
+
         messages.push(new HumanMessage(userInput))
 
-        const response = await graph.invoke({
-            messages
-        })
+        const response = await graph.invoke({ messages })
     
         // console.log(response);
         
